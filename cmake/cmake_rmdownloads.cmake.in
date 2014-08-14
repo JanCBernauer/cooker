@@ -1,0 +1,21 @@
+IF(NOT EXISTS "@CMAKE_CURRENT_SOURCE_DIR@/cmake/downloads_list.txt")
+  MESSAGE(FATAL_ERROR "Cannot find downloads list: \"@CMAKE_CURRENT_SOURCE_DIR@/cmake/downloads_list.txt\"")
+ENDIF(NOT EXISTS "@CMAKE_CURRENT_SOURCE_DIR@/cmake/downloads_list.txt")
+
+FILE(READ "@CMAKE_CURRENT_SOURCE_DIR@/cmake/downloads_list.txt" files)
+STRING(REGEX REPLACE "\n" ";" files "${files}")
+FOREACH(file ${files})
+  MESSAGE(STATUS "Deleting \"$ENV{DESTDIR}${file}\"")
+  IF(EXISTS "$ENV{DESTDIR}${file}")
+    EXEC_PROGRAM(
+      "@CMAKE_COMMAND@" ARGS "-E remove \"$ENV{DESTDIR}${file}\""
+      OUTPUT_VARIABLE rm_out
+      RETURN_VALUE rm_retval
+      )
+    IF(NOT "${rm_retval}" STREQUAL 0)
+      MESSAGE(FATAL_ERROR "Problem when removing \"$ENV{DESTDIR}${file}\"")
+    ENDIF(NOT "${rm_retval}" STREQUAL 0)
+  ELSE(EXISTS "$ENV{DESTDIR}${file}")
+    MESSAGE(STATUS "File \"$ENV{DESTDIR}${file}\" does not exist.")
+  ENDIF(EXISTS "$ENV{DESTDIR}${file}")
+ENDFOREACH(file)

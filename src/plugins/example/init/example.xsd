@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!--
+<xs:complexType name="ToFtype">
+  <xs:sequence minOccurs="0" maxOccurs="unbounded">
+    <xs:element name="date">
+      <xs:complexType>
+	<xs:sequence minOccurs="0" maxOccurs="unbounded" >
+
+
+	  <xs:element minOccurs="0" name="sol" type="xs:double"/>
+
+	  <xs:element minOccurs="0" name="tdcoffset" >
+	    <xs:complexType>
+	        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+		<xs:element name="id">
+		  <xs:complexType>
+		  <xs:simpleContent>
+		    <xs:extension base="xs:unsignedInt">
+		      <xs:attribute name="id" type="xs:unsignedInt"/>
+		    </xs:extension>
+		  </xs:simpleContent>
+		  </xs:complexType>
+		</xs:element>
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	  
+	  <xs:element minOccurs="0" name="adcoffset" >
+	    <xs:complexType>
+	        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+		<xs:element name="id">
+		  <xs:complexType>
+		  <xs:simpleContent>
+		    <xs:extension base="xs:unsignedInt">
+		      <xs:attribute name="id" type="xs:unsignedInt"/>
+		    </xs:extension>
+		  </xs:simpleContent>
+		  </xs:complexType>
+		</xs:element>
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	  <xs:element minOccurs="0" name="adcgain" >
+	    <xs:complexType>
+	        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+		<xs:element name="id">
+		  <xs:complexType>
+		  <xs:simpleContent>
+		    <xs:extension base="xs:double">
+		      <xs:attribute name="id" type="xs:unsignedInt"/>
+		    </xs:extension>
+		  </xs:simpleContent>
+		  </xs:complexType>
+		</xs:element>
+	      </xs:sequence>
+	    </xs:complexType>
+	  </xs:element>
+	  
+
+	</xs:sequence>
+	<xs:attribute name="time" type="xs:dateTime"/>
+      </xs:complexType>   
+    </xs:element>
+  </xs:sequence>
+</xs:complexType>   
+
+-->
+
+</xs:schema>
+
+
+  

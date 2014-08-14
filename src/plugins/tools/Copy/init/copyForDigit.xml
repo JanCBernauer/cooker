@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+
+<copyForDigit>
+  <config>
+    <copy_branch>branch</copy_branch>
+    <copy_obj>obj</copy_obj>
+    <debug>setDebug</debug>
+    <cmd>cmdline</cmd>
+  </config>
+
+<date time="2010-01-01T00:00:00.000Z">
+  <cmd>"da"</cmd>
+  <copy_branch>GeneratorEvent</copy_branch>
+</date>
+
+</copyForDigit>
+

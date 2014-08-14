@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cookerinit  xmlns:xi="http://www.w3.org/2001/XInclude">
+
+
+<xi:include href="../src/plugins/tools/Copy/init/Copy.xml" parse="xml"/> <!-- include Copy config -->
+<xi:include href="../src/plugins/detector/ToF/init/ToF.xml" parse="xml"/>  <!-- include ToF config -->
+
+
+</cookerinit>

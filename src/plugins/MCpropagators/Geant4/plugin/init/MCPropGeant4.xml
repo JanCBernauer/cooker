@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Propagator>
+  <config>
+    <current>setCurrent</current>
+	 <geofile>setGDMLFileName</geofile>
+	 <fieldfile>setFieldFile</fieldfile> 
+  </config>
+
+  <date time="2000-01-01T00:00:00">
+    <!--<current>5000.</current>-->
+
+	 
+
+  </date>
+</Propagator>
+

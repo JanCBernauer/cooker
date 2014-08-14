@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cooker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation='recipe.xsd'>
+
+<init>init/demo.xml</init>
+
+<source>CRT</source> <!-- the source tree name-->
+<destination>tofcooked</destination> <!-- the destination tree name-->
+
+<plugins>
+  <plugin> 
+     <name>macro</name>
+     <file>libMacro</file>
+  </plugin>
+
+
+</plugins>
+
+
+<defineHistograms>
+ <macro>defineHistograms</macro>
+</defineHistograms>
+
+<!-- These functions will be called at the beginning --> 
+<startup>
+ <macro>startup</macro>
+</startup>
+
+<!-- These functions will be executed for every event, in order of appearance -->
+<execute>
+ <macro>process</macro>
+</execute>
+
+<!-- These functions will be called at the end of the file --> 
+<finalize>
+ <macro>finalize</macro>
+</finalize>
+
+</cooker>

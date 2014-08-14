@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Copy>
+  <config>
+    <copy_branch>branch</copy_branch>
+    <copy_obj>obj</copy_obj>
+    <debug>setDebug</debug>
+    <cmd>cmdline</cmd>
+  </config>
+
+
+</Copy>
+
+
+

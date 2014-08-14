@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cooker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation='recipe.xsd'>
+
+  <init>init/demo.xml</init>
+
+  <source>CRT</source> <!-- the source tree name-->
+  <destination>MCGen</destination> <!-- the destination tree name-->
+  
+  <plugins>
+    <plugin>
+      <name>Generator</name>
+      <file>libMCGenBorn</file>
+    </plugin>
+    
+    <plugin>
+      <name>SlowCtrl</name>
+      <file>libSlowCtrl</file>
+    </plugin>
+
+    <plugin>
+      <name>SCLumi</name>
+      <file>libSCLumi</file>
+    </plugin>
+
+  </plugins>
+  
+  <!-- These functions will be called at the 'very' beginning -->
+  <defineHistograms>
+  </defineHistograms>
+
+  <!-- These functions will be called at the beginning --> 
+  <startup>
+    <SlowCtrl>init</SlowCtrl>
+    <SCLumi>startup</SCLumi>
+    <Generator>startup</Generator>
+  </startup>
+
+  <!-- These functions will be executed for every event, in order of appearance -->
+  <execute>
+    <SlowCtrl>process</SlowCtrl>
+    <SCLumi>process</SCLumi>
+    <Generator>process</Generator>
+  </execute>
+
+  <!-- These functions will be called at the end of the file --> 
+  <finalize>
+    <SCLumi>finalize</SCLumi>
+    <Generator>finalize</Generator>
+  </finalize>
+
+</cooker>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cookerinit
+  xml:base="homedir/.cooker/shared/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xsi:noNamespaceSchemaLocation='demo.xsd'>
+
+  <xi:include href="init/SCLumi.xml" parse="xml"/>
+
+<Generator>
+  <config>
+    <qrnd>useQuasiRandom</qrnd>
+    <event>setEventCount</event>
+    <eBeam>setBeamE</eBeam>
+    <spec>setBeamSpecies</spec>
+    <off>setBeamOffset</off>
+    <slope>setBeamSlope</slope>
+    <beamGeo>useBeamGeoSC</beamGeo>
+    <vertex>setVertexDist</vertex>
+    <theta>setThetaRange</theta>
+    <phi>setPhiRange</phi>
+    <dE>useDeltaECut</dE>
+   </config>
+
+<!-- Example for radiative generator
+  <date time="2000-01-01T00:00:00Z">
+    <qrnd>false</qrnd>
+    <event>100000</event>
+    <eBeam>2010.</eBeam>
+    <off>0.,0.,0.</off>
+    <slope>0.,0.</slope>
+    <beamGeo>false</beamGeo>
+    <vertex>"triangular"</vertex>
+    <theta>20.,76.</theta>
+    <phi>15.</phi>
+    <dE>false,0.</dE>
+  </date>
+-->
+
+</Generator>
+
+</cookerinit>

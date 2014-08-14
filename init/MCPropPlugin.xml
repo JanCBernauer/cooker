@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cookerinit 
+    xml:base="homedir/.cooker/shared/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xsi:noNamespaceSchemaLocation='demo.xsd'>
+
+
+ <xi:include href="init/LumiGEM.xml" parse="xml"/> <!-- include LumiGEM config -->
+ <xi:include href="init/ToF.xml" parse="xml"/> <!-- include ToF config -->
+ <xi:include href="init/LookWC.xml" parse="xml"/> <!-- include LookWC config -->
+ <xi:include href="init/WC2.xml" parse="xml"/> <!-- include WC2 config -->
+ <xi:include href="init/SCLumi.xml" parse="xml"/> <!-- include SCLumi config -->
+ <xi:include href="init/SM.xml" parse="xml"/> <!-- include SM config -->
+ <xi:include href="init/SMTNG.xml" parse="xml"/> <!-- include SMTNG config -->
+ <xi:include href="init/ToFanalysis.xml" parse="xml"/>
+
+ <xi:include href="init/MCPropGeant4.xml" parse="xml"/> <!-- Includes field settings -->
+
+
+ <!-- <xi:include href="init/Generator.xml" parse="xml"/>-->
+
+ 
+
+</cookerinit>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cooker>
+
+<init>init/copy.xml</init>
+
+<source>CRT</source> <!-- the source tree name-->
+<destination>tofcooked</destination> <!-- the destination tree name-->
+
+<plugins>
+  <plugin>
+    <name>Copy</name>
+    <file>libCopy</file>
+  </plugin>
+  <plugin> 
+     <name>ToF</name>
+     <file>libToF</file>
+  </plugin>
+</plugins>
+
+<!-- These functions will be called at the beginning --> 
+<startup>
+ <ToF>startup</ToF>
+ <Copy>copy</Copy>
+</startup>
+
+<!-- These functions will be executed for every event, in order of appearance -->
+<execute>
+ <ToF>process</ToF>
+</execute>
+
+<!-- These functions will be called at the end of the file --> 
+<finalize>
+ <ToF>done</ToF>
+</finalize>
+
+</cooker>

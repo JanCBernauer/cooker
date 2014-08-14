@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cooker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation='recipe.xsd'>
+
+  <init>init/demo.xml</init>
+
+  <source>MCGen</source> <!-- the source tree name-->
+  <destination>MCProp</destination> <!-- the destination tree name-->
+  
+  <plugins>
+    <plugin>
+      <name>Propagator</name>
+      <file>libMCPropGeant4</file>
+    </plugin>
+    
+    <plugin>
+      <name>SlowCtrl</name>
+      <file>libSlowCtrl</file>
+    </plugin>
+  </plugins>
+  
+  <!-- These functions will be called at the 'very' beginning -->
+  <defineHistograms>
+    <!--<Propagator>defineHistograms</Propagator>-->
+  </defineHistograms>
+
+  <!-- These functions will be called at the beginning --> 
+  <startup>
+    <SlowCtrl>init</SlowCtrl>
+    <Propagator>startup</Propagator>
+  </startup>
+
+  <!-- These functions will be executed for every event, in order of appearance -->
+  <execute>
+    <SlowCtrl>process</SlowCtrl>
+    <Propagator>process</Propagator>
+  </execute>
+
+  <!-- These functions will be called at the end of the file --> 
+  <finalize>
+    <Propagator>finalize</Propagator>
+  </finalize>
+
+</cooker>
